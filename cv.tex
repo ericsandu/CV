@@ -1,0 +1,287 @@
+\documentclass[a4paper,10pt]{article}
+
+% ----------- Packages -----------
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx} 
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{pagecolor}
+\usepackage[most]{tcolorbox}
+\usepackage{etoolbox}
+\usepackage{svg}
+
+% ----------- Colors (Light Mode) -----------
+\definecolor{bgwhite}{HTML}{FFFFFF}
+\definecolor{primarypurple}{HTML}{6B30D1}
+\definecolor{accentgreen}{HTML}{007F0E}
+\definecolor{textblack}{HTML}{000000}
+\definecolor{secondarypurple}{HTML}{4A4A87}
+\definecolor{boxgray}{HTML}{F2F2F2}
+
+% ----------- Page & Text Colors -----------
+\pagecolor{bgwhite}
+\color{textblack}
+
+% ----------- Hyperlink Styling -----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accentgreen,
+    urlcolor=accentgreen,
+    citecolor=accentgreen
+}
+
+% ----------- Geometry (Relaxed) -----------
+\geometry{left=1cm, top=0.8cm, right=1cm, bottom=0.8cm}
+
+% ----------- Header/Footer (SQUEEZED) -----------
+\pagestyle{empty} % Use empty style for max space
+
+% ----------- Section Titles (Relaxed) -----------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\color{primarypurple}\large
+}{}{0em}{}[\color{primarypurple}\titlerule \vspace{-7pt}]
+
+% ----------- Bullet Point Style -----------
+\renewcommand{\labelitemi}{\textcolor{accentgreen}{$\vcenter{\hbox{\tiny$\bullet$}}$}}
+
+% ----------- Tcolorbox Styling (SQUEEZED) -----------
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=boxgray,
+    colframe=primarypurple,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=2pt, 
+    arc=0pt, outer arc=0pt,
+    coltitle=accentgreen,
+    fonttitle=\bfseries\color{accentgreen}
+}
+
+% ----------- Utilities -----------
+\setlength{\multicolsep}{0pt} 
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+\newcommand{\secondary}[1]{\textcolor{secondarypurple}{#1}}
+
+% ----------- Custom Commands (FIXED) -----------
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-1mm}} 
+  }
+}
+
+% --- FIXED: Switched to a simple stacked layout. No tables. ---
+\newcommand{\resumePOR}[3]{
+\item
+    \textbf{#1}\hspace{0.3mm}#2
+    \textit{\small{#3}}
+    \vspace{-3mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\item
+    \textbf{#1} \\
+    \textit{\footnotesize{#2}} \hfill
+    \textit{\footnotesize{#3}} \\
+    \textit{\footnotesize{#4}}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\item
+    \textbf{#1} \\
+    \footnotesize{\textit{#2}} \\
+    \footnotesize{#4} \hfill \textit{\footnotesize{#3}}
+    \vspace{-3mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}} 
+
+% --- FIXED: Outer list has no bullets and some item separation ---
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=2mm, topsep=0pt, partopsep=0pt]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]} 
+% --- FIXED: Inner list has small separation ---
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0.5mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}} 
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{1mm} 
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+\newcommand{\name}{Eric Andrei Sandu}
+\newcommand{\phone}{+40 771 304 328}
+\newcommand{\emaila}{eric\_andrei.sandu@stud.acs.upb.ro}
+\newcommand{\emailb}{thephantomgm@proton.me}
+\newcommand{\website}{phanter.site}
+\newcommand{\github}{github.com/ericsandu}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADER-----------------
+\begin{minipage}[c]{0.4\textwidth}
+    \textbf{\Large \name} \\
+    \secondary{19/09/2006 • Bucharest - Romania} \\
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\textwidth}
+    \raggedleft
+    \faPhone\ \phone \\
+    \href{mailto:\emaila}{\faEnvelope\ \emaila} \\
+    \href{mailto:\emailb}{\faEnvelope\ \emailb} \\
+    \href{https://\website}{\faGlobe\ \website} \\
+    \href{https://\github}{\faGithub\ \github}
+\end{minipage}
+
+\vspace{-2mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Bachelor in Computer Science and Engineering}
+  {Faculty of \textbf{Automatic Control} and \textbf{Computer Science}}
+  {2025 -- 2029}
+  {National University of Science and Technology POLITEHNICA Bucharest}
+\resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------
+\section{\textbf{Work Experience}}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Cisco Certified Network Associate instructor - @hackademy}
+  {ACS UNSTPB}
+  {Oct 2025 -- Present}
+  {Bucharest, Romania}
+
+\resumeItemListStart
+\item {Teach \textbf{CCNA1 certified} networking courses to people of varied backgrounds}
+\item {Develop and \textbf{maintain course curriculums}, propose exam subjects in a \textbf{collaborative environment}}
+\item {Work together with fellow instructors to \textbf{organize} various activities }
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-2mm}
+
+%-----------HONOURS-----------
+\section{\textbf{Honours and Awards}}
+\resumeSubHeadingListStart
+\resumePOR{Special Mention}{— ``\textbf{Lider@5}'' Public Speaking Competition}{2023}
+\resumePOR{Mention}{— National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2024}
+\resumePOR{Bronze Medal}{— National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2025}
+\resumeSubHeadingListEnd
+
+%-----------VOLUNTEERING-----------
+\section{\textbf{Volunteering}}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Hackademy}
+  {Junior Instructor}
+  {Oct 2025 -- Present}
+  {ACS UNSTPB}
+
+\resumeItemListStart
+\item {\textbf{Supervized} and \textbf{managed} the organization of projects and events attended by many students}
+\item {Showed initiative, offering \textbf{aid in urgent situations} and solving core issues}
+  \item {Developed many \textbf{networking} through interaction with the core members }
+\resumeItemListEnd
+
+\resumeProject
+  {Linux Install Fest}
+  {Well regarded volunteer}
+  {Oct 2025}
+  {ACS UNSTPB}
+
+\resumeItemListStart
+\item {Assisted students and introduced them into the world of \textbf{Linux} and \textbf{Open-Source Software}}
+  \item {Provided \textbf{one-to-one assistance} in setting up \textbf{personalized computing environments}}
+  \item {Offered \textbf{mentorship and guidance} to a diverse range of individuals with varying skillsets}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-3mm}
+%-----------PROJECTS-----------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Media Server}
+  {Deployment of a self hosted and self managed scalable media platform}
+  {Nov 2023 -- Present}
+  {\href{https://phanter.site/jellyfin}{phanter.site/jellyfin}}
+
+\resumeItemListStart
+\item {Setup deployed from the ground up including \textbf{low lever hardware and drivers}}
+\item {Maintained for more than \textbf{two years} with constant updates and \textbf{patches for better performance} }
+\item {Scaled for many users with varied needs, including \textbf{hardware transcoding} for better \textbf{compatibility} and \textbf{accesibility}}
+\resumeItemListEnd
+
+\resumeProject
+  {Censorship Circumvention}
+  {Using spare bandwidth to make the world a better place}
+  {Dec 2023 - Present}
+  {\href{https://www.wireguard.com/papers/wireguard.pdf}{Documentation}}
+
+\resumeItemListStart
+\item {Lending a \textbf{cryptographically secure} way of navigating the internet to users in disadvantaged areas}
+\item {Use \textbf{advanced packet obfuscation} technology to bypass extensive levels of blocking and censorship }
+\item {Deployed and \textbf{maintained from scratch} on personal self-assembled hardware}
+\resumeItemListEnd
+
+\resumeProject
+  {Decentralized E2EE Communication Relay}
+  {Contribution to a large spread out and secure chat network}
+  {2023 -- 2024}
+  {\href{https://matrix.org/docs/}{Documentation}}
+
+\resumeItemListStart
+\item {Operated a \textbf{well secured} chat server that could intercommunicate with other nodes}
+\item {Optimized a \textbf{VoIP setup} using \textbf{SQM QoS} and efficient \textbf{audio encoding} algorithms }
+\item {Improved performance, security and scalability with \textbf{database optimizations} such as encryption and compression }
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-3mm}
+
+%-----------SKILLS-----------
+\section{\textbf{Technical Skills}}
+\begin{itemize}[leftmargin=0pt, label={}, nosep]
+\small{
+\item \textbf{Languages:} C, x86 NASM, Python, Bash
+\item \textbf{Systems:} Linux, BSD, Windows
+\item \textbf{Virtualization \& Containers:} QEMU, KVM, Docker, Podman, Kubernetes
+\item \textbf{Databases:} MySQL / MariaDB, SQLite
+\item \textbf{Other:} Git, Nginx / Caddy, ZFS, \LaTeX
+}
+\end{itemize}
+
+\end{document}
