@@ -101,19 +101,18 @@
 
 \newcommand{\resumeSubheading}[4]{
 \item
-    \textbf{#1} \\
-    \textit{\footnotesize{#2}} \hfill
-    \textit{\footnotesize{#3}} \\
+    \textbf{#1} \hfill \textit{\footnotesize{#3}} \\
+    \textit{\footnotesize{#2}} \\
     \textit{\footnotesize{#4}}
     \vspace{-2mm}
 }
 
 \newcommand{\resumeProject}[4]{
 \item
-    \textbf{#1} \\
+    \textbf{#1} \hfill \textit{\footnotesize{#3}} \\
     \footnotesize{\textit{#2}} \\
-    \footnotesize{#4} \hfill \textit{\footnotesize{#3}}
-    \vspace{-3mm}
+    \footnotesize{#4}
+    \vspace{-2.5mm}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}} 
@@ -250,14 +249,24 @@
 
 \resumeProject
   {Media Server}
-  {Deployment of a self hosted and self managed scalable media platform}
+  {Deployment of a self-hosted and self-managed scalable media platform}
   {Nov 2023 -- Present}
   {\href{https://phanter.site/jellyfin}{phanter.site/jellyfin}}
 
 \resumeItemListStart
-\item {Setup deployed from the ground up including \textbf{low lever hardware and drivers}}
-\item {Maintained for more than \textbf{two years} with constant updates and \textbf{patches for better performance} }
-\item {Scaled for many users with varied needs, including \textbf{hardware transcoding} for better \textbf{compatibility} and \textbf{accesibility}}
+\item {Deployed and maintained a scalable self-hosted platform from the \textbf{hardware layer up}, optimized for \textbf{low-level performance}}
+\item {Configured \textbf{GPU-accelerated hardware transcoding} and scaled resources to support multiple concurrent users}
+\resumeItemListEnd
+
+\resumeProject
+  {Open Source Contributor --- Unikraft Microkernel}
+  {Upgrading container infrastructure and restoring legacy documentation for cloud native microkernel}
+  {May 2026}
+  {\href{https://github.com/unikraft/unikraft}{\textcolor{accentgreen}{github.com/unikraft/unikraft}} \textcolor{accentgreen}{(3.7k \faStar)}}
+
+\resumeItemListStart
+\item {Refactored the \textbf{Docker infrastructure} for the project's documentation platform under the mentorship of the lead maintainer}
+\item {Recovered and updated \textbf{legacy technical documentation} from \textbf{historical git commits} to align with the modern codebase}
 \resumeItemListEnd
 
 \resumeProject
@@ -267,9 +276,8 @@
   {\href{https://www.wireguard.com/papers/wireguard.pdf}{Documentation}}
 
 \resumeItemListStart
-\item {Lending a \textbf{cryptographically secure} way of navigating the internet to users in disadvantaged areas}
-\item {Use \textbf{advanced packet obfuscation} technology to bypass extensive levels of blocking and censorship }
-\item {Deployed and \textbf{maintained from scratch} on personal self-assembled hardware}
+\item {Deployed secure \textbf{VPN routing} on self-assembled hardware, providing \textbf{cryptographically secure} internet access}
+\item {Implemented \textbf{advanced packet obfuscation} technologies to bypass extensive levels of blocking and censorship}
 \resumeItemListEnd
 
 \resumeProject
@@ -279,9 +287,8 @@
   {\href{https://matrix.org/docs/}{Documentation}}
 
 \resumeItemListStart
-\item {Operated a \textbf{well secured} chat server that could intercommunicate with other nodes}
-\item {Optimized a \textbf{VoIP setup} using \textbf{SQM QoS} and efficient \textbf{audio encoding} algorithms }
-\item {Improved performance, security and scalability with \textbf{database optimizations} such as encryption and compression }
+\item {Operated a \textbf{well secured} federated chat server, improving performance and scalability with \textbf{database optimizations}}
+\item {Optimized a \textbf{VoIP setup} using \textbf{SQM QoS} and efficient audio encoding algorithms}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -295,7 +302,7 @@
 \item \textbf{Systems:} Linux, BSD, Cisco IOS, ZephyrOS, Windows
 \item \textbf{Networking:} Routing \& Switching, TCP/IP, VPN, DNS, DHCP, QoS, SQM
 \item \textbf{Virtualization \& Containers:} QEMU, KVM, Docker, Podman, Kubernetes
-\item \textbf{Intfrastructure:} ZFS, SQLite, MySQL, MariaDB, Nginx/Caddy, Git, Github
+\item \textbf{Infrastructure:} ZFS, SQLite, MySQL, MariaDB, Nginx/Caddy, Git, Github
 }
 \end{itemize}
 
