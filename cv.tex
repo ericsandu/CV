@@ -18,7 +18,7 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{cfr-lm}
+
 \usepackage[T1]{fontenc}
 \usepackage{pagecolor}
 \usepackage[most]{tcolorbox}
@@ -141,14 +141,15 @@
 \newcommand{\emailb}{thephantomgm@proton.me}
 \newcommand{\website}{phanter.site}
 \newcommand{\github}{github.com/ericsandu}
-
+\DeclareFontShape{T1}{cmr}{b}{sc}{<-> ssub * cmr/bx/sc}{}
+\DeclareFontShape{T1}{cmr}{b}{it}{<-> ssub * cmr/bx/it}{}
 \begin{document}
 \fontfamily{cmr}\selectfont
 
 %----------HEADER-----------------
 \begin{minipage}[c]{0.4\textwidth}
     \textbf{\Large \name} \\
-    \secondary{19/09/2006 • Bucharest - Romania} \\
+    \secondary{19/09/2006 • Bucharest - Romania}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.4\textwidth}
