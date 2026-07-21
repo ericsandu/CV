@@ -7,7 +7,7 @@
 \usepackage{ragged2e}
 \usepackage[empty]{fullpage}
 \usepackage{wrapfig}
-\usepackage{tabularx} 
+\usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{geometry}
 \usepackage{marvosym}
@@ -71,14 +71,14 @@
     colframe=primarypurple,
     width=\dimexpr\textwidth\relax,
     enlarge left by=-2mm,
-    boxsep=2pt, 
+    boxsep=2pt,
     arc=0pt, outer arc=0pt,
     coltitle=accentgreen,
     fonttitle=\bfseries\color{accentgreen}
 }
 
 % ----------- Utilities -----------
-\setlength{\multicolsep}{0pt} 
+\setlength{\multicolsep}{0pt}
 \urlstyle{same}
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -87,7 +87,7 @@
 % ----------- Custom Commands (FIXED) -----------
 \newcommand{\resumeItem}[2]{
   \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-1mm}} 
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-1mm}}
   }
 }
 
@@ -115,19 +115,19 @@
     \vspace{-2.5mm}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}} 
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
 
 % --- FIXED: Outer list has no bullets and some item separation ---
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=2mm, topsep=0pt, partopsep=0pt]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]} 
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
 % --- FIXED: Inner list has small separation ---
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0.5mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}} 
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
 \newcommand{\cvsection}[1]{%
-\vspace{1mm} 
+\vspace{1mm}
 \begin{tcolorbox}
     \textbf{\large #1}
 \end{tcolorbox}
@@ -233,7 +233,7 @@
 
 \resumeProject
   {Linux Install Fest}
-  {Well regarded volunteer}
+  {Systems Setup Volunteer}
   {Oct 2025}
   {ACS UNSTPB}
 
@@ -266,30 +266,30 @@
   {\href{https://github.com/unikraft/unikraft}{\textcolor{accentgreen}{github.com/unikraft/unikraft}} \textcolor{accentgreen}{(3.7k \faStar)}}
 
 \resumeItemListStart
-\item {Refactored the \textbf{Docker infrastructure} for the project's documentation platform under the mentorship of the lead maintainer}
+\item {Refactored \textbf{Docker} with named volumes to cache \texttt{node\_modules}, speeding up builds and fixing dependencies}
 \item {Recovered and updated \textbf{legacy technical documentation} from \textbf{historical git commits} to align with the modern codebase}
 \resumeItemListEnd
 
 \resumeProject
-  {Censorship Circumvention}
-  {Using spare bandwidth to make the world a better place}
-  {Dec 2023 - Present}
-  {\href{https://www.wireguard.com/papers/wireguard.pdf}{Documentation}}
+  {CiscoGate}
+  {Unified network console with LLM-powered syntax translation and SSH proxy}
+  {Jul 2026 -- Present}
+  {\href{https://github.com/ericsandu/CiscoGate}{Repository}}
 
 \resumeItemListStart
-\item {Deployed secure \textbf{VPN routing} on self-assembled hardware, providing \textbf{cryptographically secure} internet access}
-\item {Implemented \textbf{advanced packet obfuscation} technologies to bypass extensive levels of blocking and censorship}
+\item {Engineered a real-time full-stack interface (\textbf{React, FastAPI}) for unified multi-vendor management}
+\item {Implemented \textbf{Zero-Knowledge Translation} via AES-GCM, applying prior E2EE concepts to secure payloads}
 \resumeItemListEnd
 
 \resumeProject
-  {Decentralized E2EE Communication Relay}
-  {Deployment and federation of a secure node within a decentralized chat network}
-  {2023 -- 2024}
-  {\href{https://matrix.org/docs/}{Documentation}}
+  {Moonslate}
+  {High-performance offline Live Speech-to-Speech Translation engine built in C++}
+  {Jul 2026 -- Present}
+  {\href{https://github.com/ericsandu/moonslate}{Repository}}
 
 \resumeItemListStart
-\item {Operated a \textbf{well secured} federated chat server, improving performance and scalability with \textbf{database optimizations}}
-\item {Optimized a \textbf{VoIP setup} using \textbf{SQM QoS} and efficient audio encoding algorithms}
+\item {Architected a multithreaded \textbf{Qt6/C++} pipeline integrating STT, MT, and TTS neural networks}
+\item {Optimized DSP execution to achieve \textbf{real-time sub-500ms translation latency} on consumer hardware}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -299,11 +299,11 @@
 \section{\textbf{Technical Skills}}
 \begin{itemize}[leftmargin=0pt, label={}, nosep]
 \small{
-  \item \textbf{Languages \& Markup:} C, x86 ASM, Python, Bash, HTML/CSS, Markdown, \LaTeX
-\item \textbf{Systems:} Linux, BSD, Cisco IOS, FortiOS, ZephyrOS, Windows
-\item \textbf{Networking:} Routing \& Switching, TCP/IP, VPN, DNS, DHCP, QoS, SQM
-\item \textbf{Virtualization \& Containers:} QEMU, KVM, Docker, Podman, Kubernetes
-\item \textbf{Infrastructure:} ZFS, SQLite, MySQL, MariaDB, Nginx/Caddy, Git, Github
+  \item \textbf{Languages:} C/C++, Python, JavaScript, x86 ASM, Bash, HTML/CSS, \LaTeX
+  \item \textbf{Frameworks \& Tools:} React, Vite, FastAPI, Qt6, CMake, WebSockets, Git, GitHub Actions
+  \item \textbf{AI \& ML:} Large Language Models (LLMs), STT/TTS Pipelines, Neural Networks, Data Analysis
+  \item \textbf{Networking \& Sys:} Linux, BSD, Cisco IOS, FortiOS, Routing/Switching, OSPF, VLANs, VPN, QoS
+  \item \textbf{Infra \& DevOps:} QEMU, KVM, Docker, ZFS, Nginx/Caddy, SQLite, MariaDB
 }
 \end{itemize}
 
