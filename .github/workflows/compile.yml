@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
@@ -30,6 +32,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            branch="${GITHUB_REF_NAME:-main}"
+            git pull --rebase origin "$branch"
             git commit -m "chore: auto-compile cv.pdf [skip ci]"
-            git push
+            git push origin "HEAD:$branch"
           fi
