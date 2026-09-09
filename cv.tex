@@ -91,7 +91,7 @@
   }
 }
 
-% --- FIXED: Switched to a simple stacked layout. No tables. ---
+% - FIXED: Switched to a simple stacked layout. No tables. ---
 \newcommand{\resumePOR}[3]{
 \item
     \textbf{#1}\hspace{0.3mm}#2 \hfill
@@ -117,10 +117,10 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
 
-% --- FIXED: Outer list has no bullets and some item separation ---
+% - FIXED: Outer list has no bullets and some item separation ---
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, itemsep=2mm, topsep=0pt, partopsep=0pt]}
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
-% --- FIXED: Inner list has small separation ---
+% - FIXED: Inner list has small separation ---
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0.5mm]\small}
 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0mm}}
@@ -136,9 +136,9 @@
 
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%
 \newcommand{\name}{Eric Andrei Sandu}
-\newcommand{\phone}{+40 771 304 328}
+\newcommand{\phone}{+49 01525 168 5721}
 \newcommand{\emaila}{eric\_andrei.sandu@stud.acs.upb.ro}
-\newcommand{\emailb}{thephantomgm@proton.me}
+\newcommand{\emailb}{erics.sandu@gmail.com}
 \newcommand{\website}{phanter.site}
 \newcommand{\github}{github.com/ericsandu}
 \DeclareFontShape{T1}{cmr}{b}{sc}{<-> ssub * cmr/bx/sc}{}
@@ -149,7 +149,7 @@
 %----------HEADER-----------------
 \begin{minipage}[c]{0.66\textwidth}
     \textbf{\Large \name} \\
-    \secondary{Bucharest - Romania} \\[1.5mm]
+    \secondary{Darmstadt, Germany | Erasmus+ Exchange Student} \\[1.5mm]
     \footnotesize{Computer Science student and open-source contributor with a strong focus on systems engineering, low-level performance optimization, and network infrastructure.}
 \end{minipage}
 \hfill
@@ -170,13 +170,18 @@
 \resumeSubheading
   {Bachelor in Computer Science and Engineering}
   {Faculty of \textbf{Automatic Control} and \textbf{Computer Science}}
-  {2025 -- 2029}
+  {2025 - 2029}
   {National University of Science and Technology POLITEHNICA Bucharest}
 
-\resumePOR{CCNA1: Introduction to Networks}{ - Cisco Networking Academy}{2025}
-\resumePOR{Open Source Development Course}{ - Community and Development Lab @ ROSEdu}{2026}
+\resumeSubheading
+  {Erasmus+ Exchange Student (Informatik)}
+  {Technische Universität Darmstadt}
+  {Sep 2026 - Sep 2027}
+  {Darmstadt, Germany}
+
+\resumePOR{Languages}{ - Romanian (Native), English (C1), German (A1)}{}
 \resumePOR{Machine Learning Security \& Privacy Summer School}{ - ACS UNSTPB}{2026}
-\resumePOR{Network Security and Design Summer School (CCNA2 \& 3)}{ - ACS UNSTPB}{2026}
+\resumePOR{Network Security and Design Summer School (CCNA 1, 2 \& 3)}{ - ACS UNSTPB}{2026}
 \resumeSubHeadingListEnd
 
 %-----------WORK EXPERIENCE-----------
@@ -184,21 +189,20 @@
 \resumeSubHeadingListStart
 
 \resumeProject
-  {Commission Member --- AcadNET National Olympiad}
+  {Commission Member - AcadNET National Olympiad}
   {Union of Romanian Informatics Teachers (U.T.I.R.) + Hackademy}
-  {Apr 2026 -- May 2026}
+  {Apr 2026 - May 2026}
   {Bucharest, Romania}
 
 \resumeItemListStart
-\item {Constructed, prepared, and tested exam subjects for the practical \textbf{Linux / Computers section}}
-\item {Supervised live contest execution for \textbf{100 participants}, managed infrastructure, and took part in the grading process}
-\item {Collaborated with senior volunteers and fellow passionate students to design unique and challenging subjects}
+\item {Collaborated with senior volunteers to construct and test exam subjects for the practical \textbf{Linux / Computers section}}
+\item {Supervised live contest execution for \textbf{100 participants}, managed infrastructure, and graded submissions}
 \resumeItemListEnd
 
 \resumeProject
   {Cisco Certified Network Associate instructor - @hackademy}
   {ACS UNSTPB}
-  {Oct 2025 -- Jan 2026}
+  {Oct 2025 - Jan 2026}
   {Bucharest, Romania}
 
 \resumeItemListStart
@@ -211,10 +215,9 @@
 %-----------HONOURS-----------
 \section{\textbf{Honors and Awards}}
 \resumeSubHeadingListStart
-\resumePOR{1st Place}{ — Network Security and Design Hackathon (\textbf{CiscoGate})}{2026}
-\resumePOR{Bronze Medal}{ — National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2025}
-\resumePOR{Mention}{ — National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2024}
-\resumePOR{Special Mention}{ — ``\textbf{Lider@5}'' Public Speaking Competition}{2023}
+\resumePOR{1st Place}{ - Network Security and Design Hackathon (\textbf{CiscoGate})}{2026}
+\resumePOR{Bronze Medal}{ - National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2025}
+\resumePOR{Mention}{ - National Olympiad of Applied Informatics ``\textbf{AcadNET}'' (\textbf{Linux})}{2024}
 \resumeSubHeadingListEnd
 
 %-----------VOLUNTEERING-----------
@@ -224,7 +227,7 @@
 \resumeProject
   {Hackademy}
   {Junior Instructor}
-  {Oct 2025 -- Jun 2026}
+  {Oct 2025 - Jun 2026}
   {ACS UNSTPB}
 
 \resumeItemListStart
@@ -252,7 +255,7 @@
 \resumeProject
   {Media Server}
   {Deployment of a self-hosted and self-managed scalable media platform}
-  {Nov 2023 -- Present}
+  {Nov 2023 - Present}
   {\href{https://phanter.site/jellyfin}{phanter.site/jellyfin}}
 
 \resumeItemListStart
@@ -261,20 +264,20 @@
 \resumeItemListEnd
 
 \resumeProject
-  {Open Source Contributor --- Unikraft Microkernel}
+  {Open Source Contributor @ CDL/ROSEdu - Unikraft Microkernel}
   {Upgrading container infrastructure and restoring legacy documentation for cloud native microkernel}
   {May 2026}
   {\href{https://github.com/unikraft/unikraft}{\textcolor{accentgreen}{github.com/unikraft/unikraft}} \textcolor{accentgreen}{(3.7k \faStar)}}
 
 \resumeItemListStart
 \item {Refactored \textbf{Docker} with named volumes to cache \texttt{node\_modules}, speeding up builds and fixing dependencies}
-\item {Recovered and updated \textbf{legacy technical documentation} from \textbf{historical git commits} to align with the modern codebase}
+\item {\textbf{Modernized} technical documentation by extracting and adapting architectural insights from \textbf{historical git commits}}
 \resumeItemListEnd
 
 \resumeProject
   {CiscoGate}
   {Unified network console with LLM-powered syntax translation and SSH proxy}
-  {Jul 2026 -- Present}
+  {Jul 2026 - Present}
   {\href{https://github.com/ericsandu/CiscoGate}{github.com/ericsandu/CiscoGate}}
 
 \resumeItemListStart
@@ -285,7 +288,7 @@
 \resumeProject
   {Moonslate}
   {High-performance cross-platform offline Live Speech-to-Speech Translation engine built in C++}
-  {Aug 2026 -- Present}
+  {Aug 2026 - Present}
   {\href{https://github.com/ericsandu/moonslate}{github.com/ericsandu/moonslate}}
 
 \resumeItemListStart
@@ -300,7 +303,7 @@
 \section{\textbf{Technical Skills}}
 \begin{itemize}[leftmargin=0pt, label={}, nosep]
 \small{
-  \item \textbf{Languages:} C/C++, Python, JavaScript, x86 ASM, Bash, HTML/CSS, \LaTeX
+  \item \textbf{Languages:} C, C++, Python, JavaScript, x86 ASM, Bash, HTML/CSS, \LaTeX
   \item \textbf{Frameworks \& Tools:} React, Vite, FastAPI, Qt6, CMake, WebSockets, Git, GitHub Actions
   \item \textbf{AI \& ML:} Large Language Models (LLMs), STT/TTS Pipelines, Neural Networks, Data Analysis
   \item \textbf{Networking \& Sys:} Linux, BSD, Cisco IOS, FortiOS, Routing/Switching, OSPF, VLANs, VPN, QoS
